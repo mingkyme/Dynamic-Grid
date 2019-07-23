@@ -1,0 +1,24 @@
+﻿<Window x:Class="Dynamic_Grid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dynamic_Grid"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="XAML_Col01" Width="100"/>
+            <ColumnDefinition x:Name="XAML_Col03" Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="XAML_Row01" Height="100"/>
+            <RowDefinition x:Name="XAML_Row02" Height="*"/>
+            <RowDefinition x:Name="XAML_Row03" Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Name="XAML_Grid01" Grid.Column="0" Grid.RowSpan="2" Background="Black"/>
+        <Grid Name="XAML_Grid02" Grid.Column="1" Background="Aqua"/>
+        <Grid Name="XAML_Grid03" Grid.Column="1" Grid.Row="1" Background="Aquamarine"/>
+        <Button Grid.Row="2" Grid.ColumnSpan="3" Content="변경" Click="Button_Click"/>
+    </Grid>
+</Window>
